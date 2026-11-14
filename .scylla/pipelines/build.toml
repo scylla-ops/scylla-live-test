@@ -1,0 +1,17 @@
+version = 1
+name = "build"
+
+[on.push]
+branches = ["main"]
+
+[on.pull_request]
+branches = ["main"]
+
+[[nodes]]
+id = "build"
+script = "ls -la"
+
+[[nodes]]
+id = "test"
+needs = ["build"]
+script = "test ! -f FAIL"
