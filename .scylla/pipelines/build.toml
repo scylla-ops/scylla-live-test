@@ -15,3 +15,8 @@ script = "ls -la"
 id = "test"
 needs = ["build"]
 script = "test ! -f FAIL"
+
+[[nodes]]
+id = "readme"
+needs = ["test"]
+script = "cat README.md"
