@@ -9,5 +9,5 @@ nodes:
   script: test -s README.md
 - id: files
   needs:
-  - readme
+  - readmee
   script: ls .scylla/pipelines
