@@ -1,0 +1,13 @@
+version: 1
+name: lint
+"on":
+  pull_request:
+    branches:
+    - main
+nodes:
+- id: readme
+  script: test -s README.md
+- id: files
+  needs:
+  - readme
+  script: ls .scylla/pipelines
