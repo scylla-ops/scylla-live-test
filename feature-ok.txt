@@ -1,0 +1,1 @@
+The Scylla pull request test of the GitHub integration (0.7.0).
